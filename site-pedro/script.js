@@ -10,7 +10,33 @@ function revealOnScroll() {
   }
 
   function isMobileLayout() {
-    return window.matchMedia("(max-width: 768px)").matches;
+    return window.matchMedia("(max-width: 1024px)").matches;
+  }
+
+  function setupMobileMenu() {
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    if (!toggle || !menu) return;
+
+    const setMenuOpen = (isOpen) => {
+      menu.classList.toggle("is-open", isOpen);
+      toggle.classList.toggle("is-active", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    };
+
+    toggle.addEventListener("click", () => {
+      setMenuOpen(!menu.classList.contains("is-open"));
+    });
+
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    window.addEventListener("resize", () => {
+      if (!isMobileLayout()) setMenuOpen(false);
+    });
   }
   
   /* ============================= */
@@ -64,6 +90,7 @@ function revealOnScroll() {
     revealOnScroll();
     logoParallax();
     heroParallax();
+    setupMobileMenu();
     lucide.createIcons();
   });
 

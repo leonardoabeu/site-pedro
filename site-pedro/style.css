@@ -1,777 +1,865 @@
 /* ============================= */
-/* CORES GERAIS */
+/* CORES GERAIS DO SITE */
 /* ============================= */
 :root {
-    --bg: #0f0f0f;        /* Fundo principal */
-    --bg-soft: #181818;   /* Fundo das secções */
-    --gold: #B08D57;      /* Bronze premium */
-    --gold-dark: #8D6E3F; /* Bronze escuro */
-    --blue: #0b4a73;      /* Azul premium */
-    --text: #ffffff;      /* Texto branco */
-    --muted: #d1d1d1;     /* Texto cinzento */
-  }
-  
-  /* Faz o padding não aumentar a largura dos elementos */
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* Corpo geral do site */
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-  }
-  
-  /* Largura padrão do conteúdo */
-  .container {
-    width: 88%;
-    max-width: 1280px;
-    margin: auto;
-  }
-  
-  /* ============================= */
-  /* TOPO */
-  /* ============================= */
-  .header {
-    position: fixed; /* Mantém o topo fixo */
-    top: 0;
-    width: 100%;
-    background: rgba(15, 15, 15, 0.95);
-    border-bottom: 1px solid rgba(176, 141, 87, 0.25);
-    z-index: 1000;
-  }
-  
-  .nav {
-    height: 92px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /* Logo + nome */
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  /* Logo pequena do topo */
-  .logo {
-    width: 70px; /* ALTERA TAMANHO DA LOGO DO TOPO AQUI */
-    height: 70px;
-    object-fit: contain;
-  }
-  
-  /* Nome Pedro Gontijo */
-  .brand h3 {
-    margin: 0;
-    color: var(--gold);
-    font-family: Georgia, serif;
-  }
-  
-  /* Texto pequeno abaixo do nome */
-  .brand p {
-    margin: 4px 0 0;
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  
-  /* Menu */
-  .menu a {
-    color: var(--muted);
-    text-decoration: none;
-    margin: 0 18px;
-    font-weight: 600;
-  }
-  
-  .menu a:hover {
-    color: var(--gold);
-  }
-  
-  /* Botões bronze */
-  .btn-header,
-  .btn-gold {
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-    color: #111;
-    padding: 15px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 800;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* ============================= */
-  /* HERO */
-  /* ============================= */
-  .hero {
-    min-height: 100vh;
-    padding-top: 120px;
-  
-    /* Fundo escuro com imagem */
-    background:
-      linear-gradient(
-        rgba(0,0,0,0.84),
-        rgba(0,0,0,0.94)
-      ),
-      url("imagens/logo2.png")
-      center center /
-      cover
-      no-repeat;
-  
-    display: flex;
-    align-items: center;
-  
-    /* Esconde excesso quando a logo se move */
-    overflow: hidden;
-  }
-  
-  /* Divide texto e logo em duas colunas */
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 80px;
-    align-items: center;
-  }
-  
-  /* ============================= */
-/* ETIQUETA DISPONÍVEL */
+  --bg: #0f0f0f;        /* Fundo principal */
+  --bg-soft: #181818;   /* Fundo das secções */
+  --gold: #B08D57;      /* Bronze premium */
+  --gold-dark: #8D6E3F; /* Bronze escuro */
+  --blue: #0b4a73;      /* Azul premium */
+  --text: #ffffff;      /* Texto branco */
+  --muted: #d1d1d1;     /* Texto cinzento */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+.container {
+  width: 88%;
+  max-width: 1280px;
+  margin: auto;
+}
+
 /* ============================= */
-
-.badge{
-
-  display:inline-flex;
-
-  align-items:center;
-
-  gap:8px;
-
-  padding:12px 22px;
-
-  border:1px solid rgba(176,141,87,.35);
-
-  border-radius:30px;
-
-  color: var(--gold);
-
-  background: rgba(255,255,255,.02);
-
-  backdrop-filter: blur(10px);
-
-  font-size:13px;
-
-  letter-spacing:2px;
-
-  text-transform:uppercase;
-
-}
-  /* Título principal */
-  .hero h1 {
-    font-size: clamp(48px, 6vw, 92px);
-    line-height: 1;
-    font-family: Georgia, serif;
-    margin: 35px 0 25px;
-  }
-  
-  /* Palavras em bronze */
-  .hero h1 span,
-  .section-title span,
-  .about-text span,
-  .contact h2 span {
-    color: var(--gold);
-  }
-  
-  /* Texto abaixo do título */
-  .hero p {
-    max-width: 680px;
-    color: var(--muted);
-    font-size: 22px;
-    line-height: 1.6;
-  }
-  
-  /* Botões do hero */
-  .hero-buttons {
-    display: flex;
-    gap: 20px;
-    margin-top: 35px;
-  }
-  
-  /* Botão secundário */
-  .btn-outline {
-    color: #fff;
-    border: 1px solid var(--blue);
-    padding: 15px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 800;
-  }
-  
-  /* ================================================= */
-/* 📸 FOTO DO PEDRO */
-/* ================================================= */
-
-.about-photo {
-
-  /* Centraliza a foto */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-/* FOTO */
-.about-photo img {
-
-  /* Responsivo */
+/* TOPO */
+/* ============================= */
+.header {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: auto;
+  background: rgba(15, 15, 15, 0.95);
+  border-bottom: 1px solid rgba(176, 141, 87, 0.25);
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+}
 
-  /* ================================================= */
-  /* 🔥 TAMANHO DA FOTO NO COMPUTADOR */
-  /* Aumenta ou diminui aqui */
-  /* Ex: 450px | 500px | 550px | 600px */
-  /* ================================================= */
-  max-width: 500px;
+.nav {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  /* Centraliza */
-  display: block;
-  margin: 0 auto;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-  /* Remove borda */
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.brand h3 {
+  margin: 0;
+  color: var(--gold);
+  font-family: Georgia, serif;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.menu a {
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: var(--gold);
+}
+
+.btn-header,
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #111;
+  padding: 15px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
   border: none;
-
-  /* Sombra premium */
-  filter: drop-shadow(
-    0 0 25px rgba(176,141,87,.20)
-  );
-
-  /* Animação suave */
+  cursor: pointer;
   transition: 0.3s ease;
-
 }
 
-/* Efeito ao passar o rato */
-.about-photo img:hover {
-
-  transform: scale(1.03);
-
+.btn-header:hover,
+.btn-gold:hover {
+  transform: translateY(-3px);
 }
 
-/* ================================================= */
-/* 📱 TABLET */
-/* ================================================= */
+/* ============================= */
+/* HERO */
+/* ============================= */
+.hero {
+  min-height: 100vh;
+  padding-top: 120px;
+  background:
+    linear-gradient(rgba(0,0,0,0.84), rgba(0,0,0,0.94)),
+    url("imagens/logo2.png") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border: 1px solid rgba(176,141,87,.35);
+  border-radius: 30px;
+  color: var(--gold);
+  background: rgba(255,255,255,.02);
+  backdrop-filter: blur(10px);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(34,197,94,.8);
+  animation: pulseOnline 2s infinite;
+}
+
+@keyframes pulseOnline {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34,197,94,.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 12px rgba(34,197,94,0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(34,197,94,0);
+  }
+}
+
+.hero h1 {
+  font-size: clamp(48px, 6vw, 92px);
+  line-height: 1;
+  font-family: Georgia, serif;
+  margin: 35px 0 25px;
+}
+
+.hero h1 span,
+.section-title span,
+.about-text span,
+.contact h2 span {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  color: #fff;
+  border: 1px solid var(--blue);
+  padding: 15px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 470px;
+  height: auto;
+  border: none;
+  filter: drop-shadow(0 0 25px rgba(176,141,87,.18));
+}
+
+.parallax-logo {
+  transition: transform 0.08s linear;
+  will-change: transform;
+}
+
+/* ============================= */
+/* PROVA SOCIAL */
+/* ============================= */
+.social-proof {
+  background: #111;
+  padding: 18px 0;
+}
+
+.social-proof .container {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.social-proof span {
+  color: var(--gold);
+  font-size: 22px;
+}
+
+/* ============================= */
+/* SECÇÕES */
+/* ============================= */
+.section {
+  padding: 110px 0;
+}
+
+.section-label {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(42px, 5vw, 70px);
+  font-family: Georgia, serif;
+  margin: 15px 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 21px;
+}
+
+/* ============================= */
+/* SERVIÇOS */
+/* ============================= */
+.services-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-card,
+.why-card,
+.about-card,
+.contact-box {
+  background: linear-gradient(145deg, #1b1b1b, #141414);
+  border: 1px solid var(--blue);
+  border-radius: 14px;
+  padding: 45px;
+}
+
+.service-card {
+  min-height: 250px;
+  transition: 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--gold);
+  box-shadow: 0 15px 40px rgba(176,141,87,.18);
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  background: var(--gold);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: #111;
+  stroke-width: 2.4;
+}
+
+.service-card h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+}
+
+.service-card p,
+.about-text p,
+.about-card p,
+.contact-box p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+/* ============================= */
+/* SOBRE */
+/* ============================= */
+.about {
+  background: #101010;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.pg-box {
+  width: 95px;
+  height: 95px;
+  background: var(--gold);
+  color: #111;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: -70px;
+}
+
+.about-card h3 {
+  color: var(--gold);
+  font-size: 30px;
+  font-family: Georgia, serif;
+}
+
+.stats {
+  display: flex;
+  gap: 80px;
+  margin-top: 45px;
+}
+
+.stats strong {
+  display: block;
+  color: var(--gold);
+  font-size: 38px;
+  font-family: Georgia, serif;
+}
+
+.stats span {
+  color: var(--muted);
+}
+
+.about-text .section-label {
+  text-align: left;
+}
+
+.about-text h2,
+.contact h2 {
+  font-size: clamp(42px, 5vw, 66px);
+  font-family: Georgia, serif;
+  line-height: 1.05;
+}
+
+.about-text a {
+  color: var(--gold);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* ============================= */
+/* PORQUÊ NÓS */
+/* ============================= */
+.why {
+  background: var(--bg-soft);
+}
+
+.why-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.why-card {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.why-card svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--gold);
+  stroke-width: 2.4;
+}
+
+/* ============================= */
+/* CONTACTO */
+/* ============================= */
+.contact {
+  background: #0d0d0d;
+}
+
+.contact-box {
+  text-align: center;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-info {
+  margin: 55px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.contact-info svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--gold);
+  stroke-width: 2.2;
+  margin-bottom: 15px;
+}
+
+.contact-info strong {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+}
+
+.contact-form {
+  max-width: 520px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 1px solid var(--blue);
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.checkbox {
+  color: var(--muted);
+  font-size: 14px;
+  text-align: left;
+}
+
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
+.footer {
+  background: #111;
+  border-top: 1px solid var(--blue);
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  width: 120px;
+  margin: 0;
+}
+
+.footer-location {
+  color: var(--gold);
+  font-size: 15px;
+  margin: 0;
+}
+
+.footer-copy {
+  color: #bdbdbd;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ============================= */
+/* WHATSAPP */
+/* ============================= */
+.whatsapp-btn {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 72px;
+  height: 72px;
+  background: #25D366;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 0 0 18px rgba(37, 211, 102, 0.12);
+  z-index: 2000;
+  transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+}
+
+.whatsapp-btn svg {
+  width: 34px;
+  height: 34px;
+  stroke: white;
+}
+
+/* ============================= */
+/* ANIMAÇÃO AO ROLAR */
+/* ============================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
 @media (max-width: 1024px) {
-
-  .about-photo img {
-
-    /* Tamanho no tablet */
-    max-width: 380px;
-
+  .hero-grid,
+  .about-grid,
+  .services-grid,
+  .why-grid,
+  .contact-info {
+    grid-template-columns: 1fr;
   }
 
+  .hero {
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .about-text .section-label {
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 340px;
+  }
 }
 
-/* ================================================= */
-/* 📱 TELEMÓVEL */
-/* ================================================= */
-
+/* ============================= */
+/* TELEMÓVEL */
+/* ============================= */
 @media (max-width: 768px) {
+  .container {
+    width: min(92%, 100% - 28px);
+  }
 
-  .about-photo img {
+  .menu,
+  .btn-header {
+    display: none;
+  }
 
-    /* ================================================= */
-    /* 🔥 TAMANHO DA FOTO NO TELEMÓVEL */
-    /* Aumenta ou diminui aqui */
-    /* Ex: 180px | 220px | 260px */
-    /* ================================================= */
+  .nav {
+    min-height: 82px;
+    justify-content: center;
+  }
+
+  .brand {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .brand h3 {
+    font-size: 18px;
+  }
+
+  .brand p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    line-height: 1.4;
+  }
+
+  .logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 112px 0 56px;
+    text-align: center;
+    background-position: center top !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .badge {
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 10px 14px;
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 10vw, 42px);
+    line-height: 1.06;
+    margin: 26px 0 18px;
+  }
+
+  .hero p {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .btn-gold,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+  }
+
+  .hero-image img {
     max-width: 220px;
-
   }
 
-}
-
-/* ================================================= */
-/* 📱 TELEMÓVEL PEQUENO */
-/* ================================================= */
-
-@media (max-width: 480px) {
-
-  .about-photo img {
-
-    max-width: 180px;
-
-  }
-
-}
-  
-  /* ============================= */
-  /* PROVA SOCIAL */
-  /* ============================= */
-  .social-proof {
-    background: #111;
-    padding: 18px 0;
-  }
-  
-  .social-proof .container {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-  }
-  
-  .social-proof span {
-    color: var(--gold);
-    font-size: 22px;
-  }
-  
-  /* ============================= */
-  /* SECÇÕES GERAIS */
-  /* ============================= */
   .section {
-    padding: 110px 0;
+    padding: 64px 0;
   }
-  
+
   .section-label {
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    font-size: 13px;
-    text-align: center;
+    letter-spacing: 3px;
+    line-height: 1.5;
   }
-  
+
   .section-title {
-    text-align: center;
-    font-size: clamp(42px, 5vw, 70px);
-    font-family: Georgia, serif;
-    margin: 15px 0;
+    font-size: clamp(32px, 9vw, 38px);
+    line-height: 1.12;
   }
-  
+
   .section-subtitle {
-    text-align: center;
-    color: var(--muted);
-    font-size: 21px;
+    font-size: 17px;
   }
-  
-  /* ============================= */
-  /* SERVIÇOS */
-  /* ============================= */
-  .services-grid {
-    margin-top: 70px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-  }
-  
-  /* Caixas principais */
+
   .service-card,
   .why-card,
   .about-card,
   .contact-box {
-    background: linear-gradient(145deg, #1b1b1b, #141414);
-    border: 1px solid var(--blue);
-    border-radius: 14px;
-    padding: 45px;
+    padding: 24px;
+    border-radius: 10px;
   }
-  
-  /* Card individual dos serviços */
-  .service-card {
-    min-height: 250px;
-    transition: 0.4s ease;
+
+  .services-grid,
+  .why-grid,
+  .contact-info {
+    gap: 18px;
+    margin-top: 36px;
   }
-  
-  .service-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--gold);
-  }
-  
-  /* Caixa do ícone */
+
   .icon {
-    width: 70px;
-    height: 70px;
-    background: var(--gold);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 35px;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 24px;
   }
-  
-  /* Ícone dentro da caixa */
+
   .icon svg {
-    width: 34px;
-    height: 34px;
-    stroke: #111;
-    stroke-width: 2.4;
+    width: 28px;
+    height: 28px;
   }
-  
-  /* Títulos dos serviços */
+
   .service-card h3 {
-    font-family: Georgia, serif;
-    font-size: 28px;
+    font-size: 24px;
+    margin: 0 0 12px;
   }
-  
-  /* Textos das caixas */
+
   .service-card p,
   .about-text p,
   .about-card p,
   .contact-box p {
-    color: var(--muted);
-    line-height: 1.7;
-    font-size: 18px;
+    font-size: 16px;
   }
-  
-  /* ============================= */
-  /* SOBRE */
-  /* ============================= */
-  .about {
-    background: #101010;
-  }
-  
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-  }
-  
-  /* Caixa PG */
-  .pg-box {
-    width: 95px;
-    height: 95px;
-    background: var(--gold);
-    color: #111;
-    display: grid;
-    place-items: center;
-    font-size: 34px;
-    font-family: Georgia, serif;
-    font-weight: bold;
-    border-radius: 10px;
-    margin-top: -70px;
-  }
-  
-  .about-card h3 {
-    color: var(--gold);
-    font-size: 30px;
-    font-family: Georgia, serif;
-  }
-  
-  /* Números de destaque */
+
   .stats {
-    display: flex;
-    gap: 80px;
-    margin-top: 45px;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 32px;
   }
-  
-  .stats strong {
-    display: block;
-    color: var(--gold);
-    font-size: 38px;
-    font-family: Georgia, serif;
+
+  .pg-box {
+    width: 78px;
+    height: 78px;
+    margin-top: -52px;
+    font-size: 28px;
   }
-  
-  .stats span {
-    color: var(--muted);
-  }
-  
-  .about-text .section-label {
-    text-align: left;
-  }
-  
+
   .about-text h2,
   .contact h2 {
-    font-size: clamp(42px, 5vw, 66px);
-    font-family: Georgia, serif;
-    line-height: 1.05;
+    font-size: clamp(32px, 9vw, 40px);
+    line-height: 1.12;
   }
-  
-  .about-text a {
-    color: var(--gold);
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  /* ============================= */
-  /* PORQUÊ NÓS */
-  /* ============================= */
-  .why {
-    background: var(--bg-soft);
-  }
-  
-  .why-grid {
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-  }
-  
+
   .why-card {
-    font-size: 22px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    font-size: 17px;
+    align-items: flex-start;
   }
-  
+
   .why-card svg {
-    width: 26px;
-    height: 26px;
-    stroke: var(--gold);
-    stroke-width: 2.4;
+    flex: 0 0 24px;
+    margin-top: 1px;
   }
-  
-  /* ============================= */
-  /* CONTACTO */
-  /* ============================= */
-  .contact {
-    background: #0d0d0d;
-  }
-  
-  .contact-box {
-    text-align: center;
-    max-width: 980px;
-  }
-  
+
   .contact-info {
-    margin: 55px 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    margin: 36px 0;
   }
-  
-  .contact-info svg {
-    width: 32px;
-    height: 32px;
-    stroke: var(--gold);
-    stroke-width: 2.2;
-    margin-bottom: 15px;
-  }
-  
-  .contact-info strong {
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block;
-  }
-  
-  /* Formulário */
+
   .contact-form {
-    max-width: 520px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+    width: 100%;
   }
-  
-  /* Campos */
-  .contact-form input,
-  .contact-form textarea {
-    padding: 15px;
-    border: 1px solid var(--blue);
-    background: #111;
-    color: #fff;
-    border-radius: 8px;
-  }
-  
-  .contact-form textarea {
-    min-height: 120px;
-  }
-  
-  /* Checkbox */
+
   .checkbox {
-    color: var(--muted);
-    font-size: 14px;
-    text-align: left;
+    line-height: 1.45;
   }
-  
-  /* ============================= */
-  /* RODAPÉ */
-  /* ============================= */
-  .footer {
-    border-top: 1px solid var(--blue);
-    padding: 35px 0;
-    background: #111;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
+
   .footer-logo {
-    width: 120px; /* ALTERA LOGO DO RODAPÉ AQUI */
-    vertical-align: middle;
-    margin-right: 10px;
+    width: 90px;
   }
-  
-  /* ============================= */
-  /* WHATSAPP */
-  /* ============================= */
+
   .whatsapp-btn {
-    position: fixed;
-    right: 28px;
-    bottom: 28px;
-    width: 72px;
-    height: 72px;
-    background: #25D366;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    color: white;
-    text-decoration: none;
-    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0.12);
-    z-index: 2000;
+    width: 58px;
+    height: 58px;
+    right: 18px;
+    bottom: 18px;
   }
-  
+
   .whatsapp-btn svg {
-    width: 34px;
-    height: 34px;
-    stroke: white;
+    width: 28px;
+    height: 28px;
   }
-  
-  /* ============================= */
-  /* ANIMAÇÃO AO ROLAR */
-  /* ============================= */
-  .reveal {
-    opacity: 0;
-    transform: translateY(45px);
-    transition: 0.8s ease;
-  }
-  
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* ============================= */
-  /* RESPONSIVO */
-  /* ============================= */
-  @media (max-width: 900px) {
-  
-    .menu,
-    .btn-header {
-      display: none;
-    }
-  
-    .hero-grid,
-    .about-grid,
-    .services-grid,
-    .why-grid,
-    .contact-info {
-      grid-template-columns: 1fr;
-    }
-  
-    .hero {
-      padding: 140px 0 70px;
-    }
-  
-    .hero-buttons {
-      flex-direction: column;
-    }
-  
-    .footer-content {
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
-    }
-  }
-  /* ============================= */
-/* BOLINHA VERDE ONLINE */
+}
+
 /* ============================= */
-
-.status-dot{
-
-  width: 10px;      /* 🔥 TAMANHO DA BOLA */
-  height: 10px;
-
-  background: #22c55e; /* 🔥 VERDE */
-
-  border-radius: 50%;
-
-  display: inline-block;
-
-  margin-right: 10px;
-
-  box-shadow:
-    0 0 10px rgba(34,197,94,.8);
-
-  animation: pulseOnline 2s infinite;
-
-}
-
-/* 🔥 ANIMAÇÃO DA BOLA */
-@keyframes pulseOnline {
-
-  0%{
-    box-shadow:
-    0 0 0 0 rgba(34,197,94,.7);
-  }
-
-  70%{
-    box-shadow:
-    0 0 0 12px rgba(34,197,94,0);
-  }
-
-  100%{
-    box-shadow:
-    0 0 0 0 rgba(34,197,94,0);
-  }
-
-  /* ============================= */
-/* RODAPÉ */
+/* TELEMÓVEL PEQUENO */
 /* ============================= */
+@media (max-width: 480px) {
+  .container {
+    width: min(94%, 100% - 22px);
+  }
 
-.footer {
+  .brand {
+    gap: 10px;
+  }
 
-  background: #111;
+  .brand p {
+    max-width: 190px;
+    letter-spacing: 1.4px;
+  }
 
-  border-top: 1px solid var(--blue);
+  .hero h1 {
+    font-size: 34px;
+  }
 
-  padding: 40px 20px;
+  .hero-image img {
+    max-width: 180px;
+  }
 
+  .badge {
+    font-size: 10px;
+    max-width: 100%;
+    line-height: 1.35;
+  }
+
+  .service-card,
+  .why-card,
+  .about-card,
+  .contact-box {
+    padding: 20px;
+  }
+
+  .contact-info p {
+    overflow-wrap: anywhere;
+  }
 }
-
-/* 🔥 CENTRA TUDO */
-.footer-content {
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
-  gap: 10px;
-
-}
-
-/* 🔥 LOCALIZAÇÃO */
-.footer-location {
-
-  color: var(--gold);
-
-  font-size: 15px;
-
-  margin: 0;
-
-}
-
-/* 🔥 COPYRIGHT */
-.footer-copy {
-
-  color: #bdbdbd;
-
-  font-size: 14px;
-
-  margin: 0;
-
-}
-

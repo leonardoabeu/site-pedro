@@ -8,6 +8,10 @@ function revealOnScroll() {
       }
     });
   }
+
+  function isMobileLayout() {
+    return window.matchMedia("(max-width: 768px)").matches;
+  }
   
   /* ============================= */
   /* LOGO GRANDE ACOMPANHA O SCROLL */
@@ -16,6 +20,11 @@ function revealOnScroll() {
     const logo = document.querySelector(".parallax-logo");
   
     if (!logo) return;
+
+    if (isMobileLayout()) {
+      logo.style.transform = "none";
+      return;
+    }
   
     const scroll = window.scrollY;
   
@@ -30,6 +39,11 @@ function revealOnScroll() {
     const hero = document.querySelector(".hero");
   
     if (!hero) return;
+
+    if (isMobileLayout()) {
+      hero.style.backgroundPosition = "center top";
+      return;
+    }
   
     const scroll = window.scrollY;
   
@@ -51,4 +65,9 @@ function revealOnScroll() {
     logoParallax();
     heroParallax();
     lucide.createIcons();
+  });
+
+  window.addEventListener("resize", () => {
+    logoParallax();
+    heroParallax();
   });

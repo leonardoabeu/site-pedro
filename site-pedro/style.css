@@ -564,6 +564,7 @@ svg {
   font-weight: 500;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
   z-index: 2000;
+  cursor: pointer;
   transition: 0.3s ease;
 }
 
@@ -583,6 +584,7 @@ svg {
   place-items: center;
   color: #fff;
   box-shadow: 0 0 0 10px rgba(57, 229, 108, 0.16);
+  pointer-events: none;
 }
 
 .whatsapp-btn svg {

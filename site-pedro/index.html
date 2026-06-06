@@ -3,15 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pedro Gontijo presta serviços de reparações e manutenção no Grande Porto: eletricidade, canalização, casas de banho, portas, janelas e pequenas reparações. Orçamento gratuito.">
+  <meta name="keywords" content="reparações Porto, manutenção Grande Porto, eletricista São Mamede de Infesta, canalização Porto, pequenas reparações, Pedro Gontijo">
+  <meta name="author" content="Pedro Gontijo">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f0f0f">
 
-  <title>Pedro Gontijo | Reparações e Manutenção</title>
+  <title>Pedro Gontijo | Reparações e Manutenção no Grande Porto</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:title" content="Pedro Gontijo | Reparações e Manutenção no Grande Porto">
+  <meta property="og:description" content="Reparações rápidas e manutenção profissional em São Mamede de Infesta e Grande Porto. Peça orçamento gratuito por WhatsApp.">
+  <meta property="og:image" content="imagens/logo4.png">
+  <meta property="og:site_name" content="Pedro Gontijo Reparações">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pedro Gontijo | Reparações e Manutenção">
+  <meta name="twitter:description" content="Serviços de eletricidade, canalização, casas de banho, portas, janelas e manutenção geral no Grande Porto.">
+  <meta name="twitter:image" content="imagens/logo4.png">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="imagens/foto-pedro1.png" as="image">
 
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Pedro Gontijo Reparações e Manutenção",
+    "description": "Serviços de reparações e manutenção em eletricidade, canalização, casas de banho, portas, janelas e pequenas reparações no Grande Porto.",
+    "image": "imagens/logo4.png",
+    "telephone": "+351935291692",
+    "email": "gontijoreparacoes@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São Mamede de Infesta",
+      "addressRegion": "Porto",
+      "addressCountry": "PT"
+    },
+    "areaServed": [
+      "São Mamede de Infesta",
+      "Porto",
+      "Matosinhos",
+      "Maia",
+      "Gondomar",
+      "Vila Nova de Gaia",
+      "Grande Porto"
+    ],
+    "url": ".",
+    "sameAs": [
+      "https://api.whatsapp.com/send?phone=351935291692"
+    ],
+    "priceRange": "€€",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O orçamento é gratuito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Pode enviar uma mensagem com o problema e, sempre que possível, recebe uma orientação inicial sem compromisso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que zonas do Porto são atendidas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O serviço tem base em São Mamede de Infesta e atende o Grande Porto, incluindo Porto, Matosinhos, Maia, Gondomar e Vila Nova de Gaia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Faz pequenas reparações em casa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. São feitos trabalhos como fixações, ajustes, substituições, manutenção de portas e janelas, casas de banho e pequenas intervenções gerais."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como devo pedir o serviço?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O ideal é enviar mensagem por WhatsApp com fotografias, localização e uma breve descrição. Isto ajuda a avaliar melhor a intervenção."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+<a href="#conteudo" class="skip-link">Saltar para o conteúdo</a>
 
 <!-- ============================= -->
 <!-- TOPO DO SITE -->
@@ -20,7 +123,7 @@
   <div class="container nav">
 
     <div class="brand">
-      <img src="imagens/logo4.png" alt="Pedro Gontijo" class="logo">
+      <img src="imagens/logo4.png" alt="Pedro Gontijo Reparações e Manutenção" class="logo" width="70" height="70">
 
       <div>
         <h3>Pedro Gontijo</h3>
@@ -28,10 +131,11 @@
       </div>
     </div>
 
-    <nav class="menu">
+    <nav class="menu" aria-label="Menu principal">
       <a href="#servicos">Serviços</a>
       <a href="#sobre">Sobre</a>
       <a href="#porque">Porquê nós</a>
+      <a href="#faq">FAQ</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
@@ -43,31 +147,38 @@
 <!-- ============================= -->
 <!-- HERO -->
 <!-- ============================= -->
-<section class="hero">
+<main id="conteudo">
+<section class="hero" aria-labelledby="titulo-principal">
   <div class="container hero-grid reveal">
 
     <div class="hero-text">
       <span class="badge">
-        <span class="status-dot"></span>
-        Disponível agora · 📍 Grande Porto
+        <span class="status-dot" aria-hidden="true"></span>
+        Disponível agora · Grande Porto
       </span>
 
-      <h1>Reparações &<br>Manutenção <span>de Confiança</span></h1>
+      <h1 id="titulo-principal">Reparações e manutenção no <span>Grande Porto</span></h1>
 
       <p>
-        Soluções rápidas e profissionais em eletricidade, canalização,
-        portas, janelas e pequenos reparos para moradias, apartamentos
+        Serviço profissional em eletricidade, canalização, casas de banho,
+        portas, janelas e pequenas reparações para habitações, condomínios
         e empresas em São Mamede de Infesta e arredores.
       </p>
 
       <div class="hero-buttons">
-        <a href="https://api.whatsapp.com/send?phone=351935291692&text=Ola%2C%20gostaria%20de%20pedir%20um%20orcamento." class="btn-gold" target="_blank" rel="noopener">Falar no WhatsApp</a>
-        <a href="#servicos" class="btn-outline">Ver Serviços →</a>
+        <a href="https://api.whatsapp.com/send?phone=351935291692&text=Ola%2C%20gostaria%20de%20pedir%20um%20orcamento." class="btn-gold" target="_blank" rel="noopener" aria-label="Pedir orçamento por WhatsApp">Pedir orçamento</a>
+        <a href="#servicos" class="btn-outline">Ver serviços</a>
       </div>
+
+      <ul class="hero-highlights" aria-label="Vantagens principais">
+        <li><i data-lucide="check" aria-hidden="true"></i> Orçamento gratuito</li>
+        <li><i data-lucide="clock" aria-hidden="true"></i> Resposta rápida</li>
+        <li><i data-lucide="map-pin" aria-hidden="true"></i> São Mamede de Infesta e Grande Porto</li>
+      </ul>
     </div>
 
     <div class="hero-image parallax-logo">
-      <img src="imagens/foto-pedro1.png" alt="Pedro Gontijo">
+      <img src="imagens/foto-pedro1.png" alt="Pedro Gontijo, técnico de reparações e manutenção no Grande Porto" fetchpriority="high">
     </div>
 
   </div>
@@ -80,49 +191,49 @@
   <div class="container">
 
     <p class="section-label reveal">O que fazemos</p>
-    <h2 class="section-title reveal">Serviços <span>Premium</span></h2>
+    <h2 class="section-title reveal">Serviços de <span>reparação e manutenção</span></h2>
 
     <p class="section-subtitle reveal">
-      Tudo o que precisa, com qualidade e cuidado profissional.
+      Intervenções claras, cuidadas e orientadas para resolver o problema à primeira.
     </p>
 
     <div class="services-grid">
 
-      <div class="service-card reveal">
-        <div class="icon"><i data-lucide="zap"></i></div>
-        <h3>Eletricidade</h3>
+      <article class="service-card reveal">
+        <div class="icon"><i data-lucide="zap" aria-hidden="true"></i></div>
+        <h3>Eletricidade doméstica</h3>
         <p>Instalações, tomadas, iluminação, quadros elétricos e diagnóstico de avarias.</p>
-      </div>
+      </article>
 
-      <div class="service-card reveal">
-        <div class="icon"><i data-lucide="bath"></i></div>
+      <article class="service-card reveal">
+        <div class="icon"><i data-lucide="bath" aria-hidden="true"></i></div>
         <h3>Casas de Banho</h3>
-        <p>Substituição de torneiras, sanitas, autoclismos e pequenas reparações.</p>
-      </div>
+        <p>Substituição de torneiras, sanitas, autoclismos, acessórios e pequenas reparações.</p>
+      </article>
 
-      <div class="service-card reveal">
-        <div class="icon"><i data-lucide="door-open"></i></div>
+      <article class="service-card reveal">
+        <div class="icon"><i data-lucide="door-open" aria-hidden="true"></i></div>
         <h3>Portas & Janelas</h3>
         <p>Manutenção, ajustes, fechaduras, dobradiças, vidros e vedantes.</p>
-      </div>
+      </article>
 
-      <div class="service-card reveal">
-        <div class="icon"><i data-lucide="hammer"></i></div>
-        <h3>Pequenos Reparos</h3>
+      <article class="service-card reveal">
+        <div class="icon"><i data-lucide="hammer" aria-hidden="true"></i></div>
+        <h3>Pequenas reparações</h3>
         <p>Fixações, reparações pontuais e acabamentos profissionais.</p>
-      </div>
+      </article>
 
-      <div class="service-card reveal">
-        <div class="icon"><i data-lucide="building-2"></i></div>
+      <article class="service-card reveal">
+        <div class="icon"><i data-lucide="building-2" aria-hidden="true"></i></div>
         <h3>Empresas & Comércio</h3>
-        <p>Manutenção preventiva e intervenções rápidas em espaços comerciais.</p>
-      </div>
+        <p>Manutenção preventiva e intervenções rápidas em lojas, escritórios e espaços comerciais.</p>
+      </article>
 
-      <div class="service-card reveal">
-        <div class="icon"><i data-lucide="wrench"></i></div>
+      <article class="service-card reveal">
+        <div class="icon"><i data-lucide="wrench" aria-hidden="true"></i></div>
         <h3>Manutenção Geral</h3>
         <p>Serviço para apartamentos, moradias, condomínios e empresas.</p>
-      </div>
+      </article>
 
     </div>
   </div>
@@ -140,8 +251,8 @@
       <h3>Pedro Gontijo</h3>
 
       <p>
-        Profissional dedicado a oferecer um serviço próximo, honesto e de qualidade.
-        Com base em São Mamede de Infesta, atende todo o Grande Porto.
+        Profissional dedicado a oferecer um serviço próximo, honesto e de qualidade,
+        com atenção ao diagnóstico, aos acabamentos e à comunicação com o cliente.
       </p>
 
       <div class="stats">
@@ -164,12 +275,43 @@
 
       <p>
         Cada intervenção é feita com diagnóstico claro, orçamento transparente
-        e execução cuidada.
+        e execução cuidada. O objetivo é simples: resolver bem, explicar o que
+        foi feito e deixar o espaço limpo e funcional.
       </p>
 
-      <a href="https://api.whatsapp.com/send?phone=351935291692&text=Ola%2C%20gostaria%20de%20pedir%20um%20orcamento." target="_blank" rel="noopener">Falar com Pedro →</a>
+      <a href="https://api.whatsapp.com/send?phone=351935291692&text=Ola%2C%20gostaria%20de%20pedir%20um%20orcamento." target="_blank" rel="noopener">Falar com Pedro</a>
     </div>
 
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- COMO FUNCIONA -->
+<!-- ============================= -->
+<section class="section process" aria-labelledby="processo-titulo">
+  <div class="container">
+    <p class="section-label reveal">Como funciona</p>
+    <h2 id="processo-titulo" class="section-title reveal">Um processo <span>simples e transparente</span></h2>
+
+    <div class="process-grid">
+      <article class="process-step reveal">
+        <span>1</span>
+        <h3>Explique o problema</h3>
+        <p>Envie mensagem, fotografias ou uma breve descrição do serviço pretendido.</p>
+      </article>
+
+      <article class="process-step reveal">
+        <span>2</span>
+        <h3>Receba orientação</h3>
+        <p>É feita uma primeira avaliação e, sempre que possível, uma estimativa clara.</p>
+      </article>
+
+      <article class="process-step reveal">
+        <span>3</span>
+        <h3>Agende a intervenção</h3>
+        <p>Combinamos o melhor horário e o serviço é executado com cuidado e atenção.</p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -179,15 +321,34 @@
 <section id="porque" class="section why">
   <div class="container">
 
-    <h2 class="section-title reveal">Compromisso <span>Premium</span></h2>
+    <h2 class="section-title reveal">Porquê escolher <span>Pedro Gontijo</span></h2>
 
     <div class="why-grid">
-      <div class="why-card reveal"><i data-lucide="check-circle"></i> Orçamento gratuito e sem compromisso</div>
-      <div class="why-card reveal"><i data-lucide="check-circle"></i> Profissional com experiência comprovada</div>
-      <div class="why-card reveal"><i data-lucide="check-circle"></i> Materiais de qualidade</div>
-      <div class="why-card reveal"><i data-lucide="check-circle"></i> Resposta rápida no Grande Porto</div>
+      <div class="why-card reveal"><i data-lucide="check-circle" aria-hidden="true"></i> Orçamento gratuito e sem compromisso</div>
+      <div class="why-card reveal"><i data-lucide="check-circle" aria-hidden="true"></i> Comunicação clara antes de iniciar o serviço</div>
+      <div class="why-card reveal"><i data-lucide="check-circle" aria-hidden="true"></i> Materiais adequados e acabamentos cuidados</div>
+      <div class="why-card reveal"><i data-lucide="check-circle" aria-hidden="true"></i> Resposta rápida no Grande Porto</div>
     </div>
 
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- ZONA DE ATUAÇÃO -->
+<!-- ============================= -->
+<section class="section coverage" aria-labelledby="cobertura-titulo">
+  <div class="container coverage-box reveal">
+    <div>
+      <p class="section-label">Zona de atuação</p>
+      <h2 id="cobertura-titulo">Reparações em São Mamede de Infesta e Grande Porto</h2>
+      <p>
+        Atendimento em São Mamede de Infesta, Porto, Matosinhos, Maia, Gondomar,
+        Vila Nova de Gaia e zonas próximas. Para confirmar disponibilidade,
+        envie uma mensagem com a localização e o serviço pretendido.
+      </p>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=351935291692&text=Ola%2C%20gostaria%20de%20saber%20se%20atende%20a%20minha%20zona." class="btn-gold" target="_blank" rel="noopener">Confirmar disponibilidade</a>
   </div>
 </section>
 
@@ -196,8 +357,40 @@
 <!-- ============================= -->
 <section class="social-proof">
   <div class="container">
-    <span>★★★★★</span>
-    <p>Clientes satisfeitos em toda a região</p>
+    <span aria-label="Avaliação de cinco estrelas">★★★★★</span>
+    <p>Serviço próximo, cuidadoso e orientado para resolver o problema com transparência.</p>
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- FAQ -->
+<!-- ============================= -->
+<section id="faq" class="section faq" aria-labelledby="faq-titulo">
+  <div class="container">
+    <p class="section-label reveal">Perguntas frequentes</p>
+    <h2 id="faq-titulo" class="section-title reveal">Dúvidas antes de pedir <span>orçamento</span></h2>
+
+    <div class="faq-grid">
+      <details class="faq-item reveal">
+        <summary>O orçamento é gratuito?</summary>
+        <p>Sim. Pode enviar uma mensagem com o problema e, sempre que possível, recebe uma orientação inicial sem compromisso.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Que zonas do Porto são atendidas?</summary>
+        <p>O serviço tem base em São Mamede de Infesta e atende o Grande Porto, incluindo Porto, Matosinhos, Maia, Gondomar e Vila Nova de Gaia.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Faz pequenas reparações em casa?</summary>
+        <p>Sim. São feitos trabalhos como fixações, ajustes, substituições, manutenção de portas e janelas, casas de banho e pequenas intervenções gerais.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Como devo pedir o serviço?</summary>
+        <p>O ideal é enviar mensagem por WhatsApp com fotografias, localização e uma breve descrição. Isto ajuda a avaliar melhor a intervenção.</p>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -215,28 +408,39 @@
 
     <div class="contact-info">
       <div>
-        <i data-lucide="map-pin"></i>
+        <i data-lucide="map-pin" aria-hidden="true"></i>
         <strong>Localização</strong>
         <p>São Mamede de Infesta, Porto</p>
       </div>
 
       <div>
-        <i data-lucide="phone"></i>
+        <i data-lucide="phone" aria-hidden="true"></i>
         <strong>Telemóvel</strong>
-        <p>+351 935 291 692</p>
+        <p><a href="tel:+351935291692">+351 935 291 692</a></p>
       </div>
 
       <div>
-        <i data-lucide="mail"></i>
+        <i data-lucide="mail" aria-hidden="true"></i>
         <strong>Email</strong>
-        <p>gontijoreparacoes@gmail.com</p>
+        <p><a href="mailto:gontijoreparacoes@gmail.com">gontijoreparacoes@gmail.com</a></p>
       </div>
     </div>
 
     <form class="contact-form" action="https://formspree.io/f/xlgvvjjn" method="POST">
-      <input type="email" name="email" placeholder="O seu email" required>
-      <input type="tel" name="telefone" placeholder="O seu telemóvel" required>
-      <textarea name="mensagem" placeholder="Descreva o serviço pretendido..." required></textarea>
+      <label>
+        <span>O seu email</span>
+        <input type="email" name="email" autocomplete="email" placeholder="exemplo@email.pt" required>
+      </label>
+
+      <label>
+        <span>O seu telemóvel</span>
+        <input type="tel" name="telefone" autocomplete="tel" placeholder="+351 900 000 000" required>
+      </label>
+
+      <label>
+        <span>Serviço pretendido</span>
+        <textarea name="mensagem" placeholder="Descreva o problema, a zona e a disponibilidade..." required></textarea>
+      </label>
 
       <label class="checkbox">
         <input type="checkbox" required>
@@ -248,6 +452,7 @@
 
   </div>
 </section>
+</main>
 
 <!-- ============================= -->
 <!-- RODAPÉ -->
@@ -255,7 +460,7 @@
 <footer class="footer">
   <div class="container footer-content">
 
-    <img src="imagens/logo6.png" alt="Logo" class="footer-logo">
+    <img src="imagens/logo6.png" alt="Pedro Gontijo Reparações" class="footer-logo" loading="lazy">
 
     <p class="footer-copy">
       © 2026 Pedro Gontijo · Todos os direitos reservados

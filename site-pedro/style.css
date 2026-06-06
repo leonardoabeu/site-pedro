@@ -28,6 +28,19 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
 img,
 svg {
   max-width: 100%;
@@ -37,6 +50,24 @@ svg {
   width: 88%;
   max-width: 1280px;
   margin: auto;
+}
+
+.skip-link {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  padding: 12px 16px;
+  background: var(--gold);
+  color: #111;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  transform: translateY(-140%);
+  z-index: 3000;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 /* ============================= */
@@ -90,6 +121,7 @@ svg {
   text-decoration: none;
   margin: 0 18px;
   font-weight: 600;
+  padding: 10px 0;
 }
 
 .menu a:hover {
@@ -107,6 +139,9 @@ svg {
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-header:hover,
@@ -203,6 +238,34 @@ svg {
   flex-wrap: wrap;
 }
 
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+}
+
+.hero-highlights li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(176, 141, 87, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero-highlights svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold);
+}
+
 .btn-outline {
   color: #fff;
   border: 1px solid var(--blue);
@@ -284,6 +347,8 @@ svg {
   text-align: center;
   color: var(--muted);
   font-size: 21px;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 /* ============================= */
@@ -343,10 +408,56 @@ svg {
 .service-card p,
 .about-text p,
 .about-card p,
-.contact-box p {
+.contact-box p,
+.process-step p,
+.coverage-box p,
+.faq-item p {
   color: var(--muted);
   line-height: 1.7;
   font-size: 18px;
+}
+
+/* ============================= */
+/* COMO FUNCIONA */
+/* ============================= */
+.process {
+  background: #0d0d0d;
+}
+
+.process-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.process-step {
+  padding: 34px;
+  border: 1px solid rgba(176, 141, 87, 0.24);
+  border-radius: 12px;
+  background: #141414;
+}
+
+.process-step span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: var(--gold);
+  color: #111;
+  border-radius: 50%;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.process-step h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, serif;
+  font-size: 26px;
+}
+
+.process-step p {
+  margin: 0;
 }
 
 /* ============================= */
@@ -448,6 +559,79 @@ svg {
 }
 
 /* ============================= */
+/* ZONA DE ATUAÇÃO */
+/* ============================= */
+.coverage {
+  background: #101010;
+}
+
+.coverage-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 44px;
+  border: 1px solid rgba(176, 141, 87, 0.28);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #1a1a1a, #111);
+}
+
+.coverage-box .section-label {
+  text-align: left;
+  margin-top: 0;
+}
+
+.coverage-box h2 {
+  margin: 0 0 16px;
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.08;
+}
+
+.coverage-box p {
+  margin: 0;
+  max-width: 760px;
+}
+
+/* ============================= */
+/* FAQ */
+/* ============================= */
+.faq {
+  background: var(--bg-soft);
+}
+
+.faq-grid {
+  max-width: 900px;
+  margin: 56px auto 0;
+  display: grid;
+  gap: 14px;
+}
+
+.faq-item {
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  background: #121212;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  padding: 22px 24px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.faq-item summary::marker {
+  color: var(--gold);
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 24px 22px;
+}
+
+/* ============================= */
 /* CONTACTO */
 /* ============================= */
 .contact {
@@ -483,12 +667,31 @@ svg {
   display: block;
 }
 
+.contact-info a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: var(--gold);
+}
+
 .contact-form {
   max-width: 520px;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.contact-form label:not(.checkbox) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .contact-form input,
@@ -614,8 +817,10 @@ svg {
   .hero-grid,
   .about-grid,
   .services-grid,
+  .process-grid,
   .why-grid,
-  .contact-info {
+  .contact-info,
+  .coverage-box {
     grid-template-columns: 1fr;
   }
 
@@ -632,7 +837,19 @@ svg {
     justify-content: center;
   }
 
+  .hero-highlights {
+    justify-content: center;
+  }
+
   .about-text .section-label {
+    text-align: center;
+  }
+
+  .coverage-box {
+    text-align: center;
+  }
+
+  .coverage-box .section-label {
     text-align: center;
   }
 
@@ -746,12 +963,14 @@ svg {
   .service-card,
   .why-card,
   .about-card,
+  .process-step,
   .contact-box {
     padding: 24px;
     border-radius: 10px;
   }
 
   .services-grid,
+  .process-grid,
   .why-grid,
   .contact-info {
     gap: 18px;
@@ -777,8 +996,36 @@ svg {
   .service-card p,
   .about-text p,
   .about-card p,
-  .contact-box p {
+  .contact-box p,
+  .process-step p,
+  .coverage-box p,
+  .faq-item p {
     font-size: 16px;
+  }
+
+  .process-step h3 {
+    font-size: 23px;
+  }
+
+  .coverage-box {
+    padding: 26px;
+  }
+
+  .coverage-box h2 {
+    font-size: clamp(30px, 9vw, 38px);
+  }
+
+  .faq-grid {
+    margin-top: 34px;
+  }
+
+  .faq-item summary {
+    padding: 18px 20px;
+    font-size: 17px;
+  }
+
+  .faq-item p {
+    padding: 0 20px 18px;
   }
 
   .stats {
@@ -883,8 +1130,22 @@ svg {
   .service-card,
   .why-card,
   .about-card,
+  .process-step,
   .contact-box {
     padding: 20px;
+  }
+
+  .hero-highlights {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-highlights li {
+    justify-content: center;
+  }
+
+  .coverage-box {
+    padding: 22px;
   }
 
   .contact-info p {

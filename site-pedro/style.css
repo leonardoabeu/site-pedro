@@ -210,33 +210,104 @@
     font-weight: 800;
   }
   
-  /* ============================= */
-  /* LOGO GRANDE DO HERO */
-  /* ============================= */
-  .hero-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* ================================================= */
+/* 📸 FOTO DO PEDRO */
+/* ================================================= */
+
+.about-photo {
+
+  /* Centraliza a foto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* FOTO */
+.about-photo img {
+
+  /* Responsivo */
+  width: 100%;
+  height: auto;
+
+  /* ================================================= */
+  /* 🔥 TAMANHO DA FOTO NO COMPUTADOR */
+  /* Aumenta ou diminui aqui */
+  /* Ex: 450px | 500px | 550px | 600px */
+  /* ================================================= */
+  max-width: 500px;
+
+  /* Centraliza */
+  display: block;
+  margin: 0 auto;
+
+  /* Remove borda */
+  border: none;
+
+  /* Sombra premium */
+  filter: drop-shadow(
+    0 0 25px rgba(176,141,87,.20)
+  );
+
+  /* Animação suave */
+  transition: 0.3s ease;
+
+}
+
+/* Efeito ao passar o rato */
+.about-photo img:hover {
+
+  transform: scale(1.03);
+
+}
+
+/* ================================================= */
+/* 📱 TABLET */
+/* ================================================= */
+
+@media (max-width: 1024px) {
+
+  .about-photo img {
+
+    /* Tamanho no tablet */
+    max-width: 380px;
+
   }
-  
-  /* Imagem da logo grande */
-  .hero-image img {
-    width: 100%;
-  
-    /* ALTERA TAMANHO DA LOGO GRANDE AQUI */
-    max-width: 470px;
-  
-    border: none;
-  
-    /* Brilho premium */
-    filter: drop-shadow(0 0 25px rgba(176,141,87,.18));
+
+}
+
+/* ================================================= */
+/* 📱 TELEMÓVEL */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  .about-photo img {
+
+    /* ================================================= */
+    /* 🔥 TAMANHO DA FOTO NO TELEMÓVEL */
+    /* Aumenta ou diminui aqui */
+    /* Ex: 180px | 220px | 260px */
+    /* ================================================= */
+    max-width: 220px;
+
   }
-  
-  /* Classe que o JavaScript usa para mover a logo */
-  .parallax-logo {
-    transition: transform 0.08s linear;
-    will-change: transform;
+
+}
+
+/* ================================================= */
+/* 📱 TELEMÓVEL PEQUENO */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+  .about-photo img {
+
+    max-width: 180px;
+
   }
+
+}
   
   /* ============================= */
   /* PROVA SOCIAL */
@@ -703,4 +774,4 @@
   margin: 0;
 
 }
-}
+
